@@ -5,163 +5,129 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Frutalí - Jugos Naturales</title>
   <style>
+    /* Fondo natural */
     body {
-      font-family: 'Arial', sans-serif;
       margin: 0;
-      padding: 0;
-      background: linear-gradient(to bottom, #f0f9f4, #ffffff); /* Fondo más natural */
+      font-family: Arial, sans-serif;
+      background: url('https://images.unsplash.com/photo-1506806732259-39c2d0268443?auto=format&fit=crop&w=1470&q=80') no-repeat center center fixed;
+      background-size: cover;
       color: #333;
     }
 
-    header {
+    /* Fondo semitransparente para el contenido */
+    .container {
+      background-color: rgba(255, 255, 255, 0.9);
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 20px;
+      border-radius: 15px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+    }
+
+    h1 {
       text-align: center;
-      padding: 30px 20px 10px 20px;
-      background: rgba(255, 255, 255, 0.8);
-      backdrop-filter: blur(5px);
+      color: #ff6b6b;
     }
 
-    header img {
-      max-width: 200px;
-      margin-bottom: 15px;
-    }
-
-    header h1 {
-      font-size: 2em;
-      margin: 0;
-      color: #d45591;
-    }
-
-    header p {
-      font-size: 1.1em;
-      color: #a0527f;
-    }
-
-    .menu {
-      max-width: 600px;
-      margin: 20px auto;
-      padding: 0 20px;
-    }
-
-    .menu h2 {
-      text-align: center;
-      color: #d45591;
-      margin-bottom: 20px;
-    }
-
-    .menu-item {
+    .drink {
       display: flex;
       align-items: center;
-      margin-bottom: 15px;
-      background: #ffffff;
-      padding: 10px;
-      border-radius: 15px;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-      transition: transform 0.2s ease;
+      margin: 20px 0;
+      padding: 15px;
+      border-bottom: 1px solid #ddd;
     }
 
-    .menu-item:hover {
-      transform: translateY(-3px);
-    }
-
-    .menu-item img {
-      width: 80px;
-      height: 80px;
+    .drink img {
+      width: 120px;
+      height: 120px;
       object-fit: cover;
-      border-radius: 12px;
-      margin-right: 15px;
+      border-radius: 10px;
+      margin-right: 20px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
     }
 
-    .menu-item div {
-      flex: 1;
+    .drink-details h2 {
+      margin: 0 0 5px;
+      color: #ff6b6b;
     }
 
-    .menu-item div h3 {
-      margin: 0 0 5px 0;
-      color: #d45591;
-    }
-
-    .menu-item div p {
+    .drink-details p {
       margin: 0;
+      font-size: 0.95em;
     }
 
-    .price {
-      font-weight: bold;
-      color: #a0527f;
-    }
-
-    .contact {
+    /* Botón WhatsApp */
+    .whatsapp-btn {
+      display: block;
+      width: 200px;
+      margin: 30px auto 0;
       text-align: center;
-      margin: 30px 20px;
-      padding: 20px;
-      background: rgba(255, 255, 255, 0.8);
-      border-radius: 15px;
-      backdrop-filter: blur(5px);
-    }
-
-    .contact a {
-      text-decoration: none;
-      color: #ffffff;
-      background-color: #d45591;
-      padding: 10px 20px;
-      border-radius: 25px;
+      padding: 12px 0;
+      background-color: #25D366;
+      color: white;
       font-weight: bold;
-      font-size: 1.2em;
-      transition: background-color 0.3s ease;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: background 0.3s;
     }
 
-    .contact a:hover {
-      background-color: #a0527f;
+    .whatsapp-btn:hover {
+      background-color: #1ebe5d;
+    }
+
+    @media (max-width: 600px) {
+      .drink {
+        flex-direction: column;
+        text-align: center;
+      }
+      .drink img {
+        margin: 0 0 10px 0;
+      }
     }
   </style>
 </head>
 <body>
+  <div class="container">
+    <h1>Frutalí - Jugos Naturales</h1>
 
-<header>
-  <img src="Frutali_logo.png" alt="Frutalí Logo">
-  <h1>Frutalí</h1>
-  <p>Refresca tus días mientras disfrutas de tus uñas 💖</p>
-</header>
-
-<section class="menu">
-  <h2>Menú de Jugos</h2>
-
-  <div class="menu-item">
-    <img src="mango_pina.png" alt="Mango + Piña">
-    <div>
-      <h3>Mango + Piña</h3>
-      <p class="price">$5.000 COP</p>
+    <!-- Bebida 1 -->
+    <div class="drink">
+      <img src="mango_pina.png" alt="Mango + Piña">
+      <div class="drink-details">
+        <h2>Mango + Piña</h2>
+        <p>Jugo natural de mango y piña, refrescante y dulce, ideal para el verano.</p>
+      </div>
     </div>
-  </div>
 
-  <div class="menu-item">
-    <img src="sandia_limon.png" alt="Sandía + Limón">
-    <div>
-      <h3>Sandía + Limón</h3>
-      <p class="price">$5.000 COP</p>
+    <!-- Bebida 2 -->
+    <div class="drink">
+      <img src="sandia_limon.png" alt="Sandía + Limón">
+      <div class="drink-details">
+        <h2>Sandía + Limón</h2>
+        <p>Sandía fresca con un toque de limón, jugo ligero y cítrico.</p>
+      </div>
     </div>
-  </div>
 
-  <div class="menu-item">
-    <img src="fresa_banano.png" alt="Fresa + Banano">
-    <div>
-      <h3>Fresa + Banano</h3>
-      <p class="price">$5.000 COP</p>
+    <!-- Bebida 3 -->
+    <div class="drink">
+      <img src="fresa_limon.png" alt="Fresa + Limón">
+      <div class="drink-details">
+        <h2>Fresa + Limón</h2>
+        <p>Fresas naturales con limón, un equilibrio perfecto entre dulce y ácido.</p>
+      </div>
     </div>
-  </div>
 
-  <div class="menu-item">
-    <img src="fresa_limon.png" alt="Fresa + Limón">
-    <div>
-      <h3>Fresa + Limón</h3>
-      <p class="price">$5.000 COP</p>
+    <!-- Bebida 4 -->
+    <div class="drink">
+      <img src="fresa_banano.png" alt="Fresa + Banano">
+      <div class="drink-details">
+        <h2>Fresa + Banano</h2>
+        <p>Fresas y banano cremoso, ideal para un jugo más dulce y nutritivo.</p>
+      </div>
     </div>
+
+    <!-- Botón WhatsApp -->
+    <a class="whatsapp-btn" href="https://wa.me/573124469012" target="_blank">¡Pedir por WhatsApp!</a>
   </div>
-</section>
-
-<section class="contact">
-  <p>Para pedidos o información:</p>
-  <p><a href="https://wa.me/573124469012" target="_blank">WhatsApp</a></p>
-</section>
-
 </body>
 </html>
